@@ -28,7 +28,7 @@ const [rootPath] = window.location.href.split('/pages/')
 const factory = {
   async initialize() {
     return Controller.initialize({
-      view: new View({}),
+      view: new View(),
       service: new Service({})
     })
   }
