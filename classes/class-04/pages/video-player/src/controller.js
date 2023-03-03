@@ -3,12 +3,12 @@ export default class Controller {
     #camera
     #worker
     #blinkCounter = 0
-    constructor({ view, service, worker, camera }) {
+    constructor({ view, worker, camera }) {
         this.#view = view
         this.#camera = camera
         this.#worker = this.#configureWorker(worker)
 
-        this.#view.configureOnBtnClick(this.onBtnStart.bind(this))
+        this.#view.configureOnBtnClick(this.onBtnStart.bind(this))        
     }
 
     static async initialize(deps) {
