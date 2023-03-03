@@ -30,8 +30,8 @@ export default class HandGestureService {
             const result = gestures.reduce(
                 (previous, current) => (previous.score > current.score) ? previous : current
             )
-            
-            console.log('detected', gestureStrings[result.name])
+            const { x, y } = hand.keypoints.find(keypoint => keypoint.name === 'index_finger_tip')
+            console.log('detected', gestureStrings[result.name], x, y)
         }
     }
 
