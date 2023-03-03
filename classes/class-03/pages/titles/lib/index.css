@@ -826,6 +826,15 @@ a {
 
 /* END MODAL */
 
+#hands {  
+    /* faz com que elementos possam ser clicaveis */    
+   pointer-events: none;    
+   /* faz ficar em cima dos elementos */    
+   position: fixed;    
+   /* fica à frente dos elementos */  
+    z-index: 2;
+}
+
 @media screen and (max-width: 1660px) {
     .top p {
         font-size: 16px;
