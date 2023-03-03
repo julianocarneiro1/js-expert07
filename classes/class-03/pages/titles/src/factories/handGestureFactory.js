@@ -16,9 +16,9 @@ const factory = {
     async initialize() {
         return HandGestureController.initialize({
             camera,
-            view: new HandGestureView(
+            view: new HandGestureView({
                 fingerLookupIndexes
-            ),
+            }),
             service: new HandGestureService({
                 gestureStrings,
                 knownGestures,
